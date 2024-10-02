@@ -12,6 +12,9 @@ const data = await res.json();
 if(res.status === 404){
   document.querySelector('.error').style.display = 'block'
   document.querySelector('.weather').style.display = 'none'
+  setTimeout(()=>{
+    document.querySelector('.error').style.display = 'none'
+  },5000)
 }
 else{
   document.querySelector('.temp').innerHTML = Math.round(data.main.temp ) +'°C';
@@ -52,23 +55,48 @@ fetchWeatherData(city.value)
 })
 
 const background = [
-  {color1: 'var(--gradient-2)'},
-  {color2: 'var(--gradient-12)'},
-  {color3: 'var(--gradient-11)'},
-  {color4: 'var(--gradient-13)'},
-  {color5: 'var(--gradient-14)'},
-  {color6: 'var(--gradient-15)'},
-  {color7: 'var(--gradient-18)'},
+  {
+    color1: 'var(--gradient-2)',
+    fontColor: 'var(--gray-6)'
+  },
+  {
+    color1: 'var(--gradient-12)',
+    fontColor: 'var(--gray-8)'
+  },
+  {
+    color1: 'var(--gradient-11)',
+  fontColor: 'var(--blue-10)'
+  },
+  {
+    color1: 'var(--gradient-13)',
+  fontColor: 'var(--gray-8)' 
+  },
+  {
+    color1: 'var(--gradient-14)',
+    fontColor: 'var(--Choco-7)'
+  },
+  {
+    color1: 'var(--gradient-15)',
+    fontColor: 'var(--gray-8)'
+  },
+  {
+    color1: 'var(--gradient-18)',
+    fontColor: 'var(--yellow-8)'
+  },
+  {
+    color1: 'var(--gradient-26)',
+    fontColor: 'var(--teal-5)'
+  },
 ]
  
 setInterval(()=>{
   let randomNum = Math.floor(Math.random() * background.length)
   let randomColor = background[randomNum]
 
-  for(color in randomColor){
-    document.querySelector('.card').style.backgroundImage = randomColor[color]
-  }
-},36000)
+    document.querySelector('.card').style.backgroundImage =  randomColor.color1;
+    document.querySelector('.card').style.color = randomColor.fontColor
+
+},60000)
  
 
 

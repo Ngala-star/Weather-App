@@ -9,15 +9,18 @@ body{
   height: 100vh;
   font-family: "Poppins", sans-serif;
   background: var(--stone-10);
+  overflow: hidden;
 }
 .card{
-  background-image: var(--gradient-26);
+  background-image: var(--gradient-2);
   width: 45%;
+  box-shadow: var(--shadow-4);
   padding: 20px 30px;
   margin-inline: auto;
   margin-top: 20px;
   border-radius: var(--radius-3);
   transition: background-image 0.5s ease-in-out;
+  
 }
 .search{
   display: flex;
@@ -65,6 +68,7 @@ body{
 }
 .weather-icon img{
   width: 200px;
+  max-width: 100%;
 }
 .weather-icon div p{
   font-size: var(--font-size-6);
@@ -86,6 +90,7 @@ body{
 }
 .weather-features .col{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -93,7 +98,25 @@ body{
 .weather-features .col img{
   width: 50px;
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 .weather-features .col div p{
   font-size: var(--font-size-3);
+}
+
+/* --------------small screens-------- */
+@media screen and (max-width: 770px) {
+  .card{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .weather-features{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .search{
+    width: 100%;
+  }
 }
