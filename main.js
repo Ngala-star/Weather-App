@@ -52,40 +52,55 @@ else{
 }
 searchbtn.addEventListener('click',()=>{
 fetchWeatherData(city.value)
+});
+city.addEventListener('keydown', (e)=>{
+  if(e.key === 'Enter'){
+    fetchWeatherData(city.value)
+  }
 })
 
+/* ----footer section---- */
+var footer = document.getElementById('footer')
+const date = new Date();
+const year = date.getFullYear();
+console.log(date)
+console.log(year)
+footer.innerHTML = `&copy; ${year} Created by <span>A</span>lex<span> .</span>`
+
+
+/* ------background color picker----- */
 const background = [
   {
-    color1: 'var(--gradient-2)',
-    fontColor: 'var(--gray-6)'
+    color1: 'var(--gradient-3)',
+    fontColor: 'var(--gray-3)'
   },
   {
     color1: 'var(--gradient-12)',
     fontColor: 'var(--gray-8)'
   },
   {
-    color1: 'var(--gradient-11)',
-  fontColor: 'var(--blue-10)'
+    color1: 'var(--gradient-1)',
+  fontColor: 'var(--blue-5)'
   },
   {
     color1: 'var(--gradient-13)',
-  fontColor: 'var(--gray-8)' 
+  fontColor: 'var(--gray-10)' 
   },
   {
     color1: 'var(--gradient-14)',
-    fontColor: 'var(--Choco-7)'
+    fontColor: 'var(--choco-7)'
   },
   {
-    color1: 'var(--gradient-15)',
-    fontColor: 'var(--gray-8)'
+    color1: 'var(--gradient-4)',
+    fontColor: 'var(--gray-10)'
   },
   {
-    color1: 'var(--gradient-18)',
-    fontColor: 'var(--yellow-8)'
+    color1: 'var(--gradient-19)',
+    fontColor: 'var(--lime-8)'
   },
   {
     color1: 'var(--gradient-26)',
-    fontColor: 'var(--teal-5)'
+    fontColor: 'var(--indigo-7)'
   },
 ]
  
@@ -94,7 +109,7 @@ setInterval(()=>{
   let randomColor = background[randomNum]
 
     document.querySelector('.card').style.backgroundImage =  randomColor.color1;
-    document.querySelector('.card').style.color = randomColor.fontColor
+    document.querySelector('.weather').style.color = randomColor.fontColor
 
 },60000)
  
