@@ -134,6 +134,8 @@ body{
 footer{
   text-align: center;
   padding: 15px;
+  position: sticky;
+  bottom: 0;
 }
 footer small{
   font-size: var(--font-size-3);
