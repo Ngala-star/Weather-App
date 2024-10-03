@@ -20,7 +20,7 @@ body{
 
 .card{
   background-image: var(--gradient-2);
-  width: 50%;
+  width: 45%;
   min-width: 300px;
   box-shadow: var(--shadow-4);
   padding: 15px 20px;
