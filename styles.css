@@ -18,7 +18,7 @@ body{
   width: 45%;
   min-width: 300px;
   box-shadow: var(--shadow-4);
-  padding: 20px 30px;
+  padding: 15px 20px;
   margin-inline: auto;
   margin-top: 20px;
   border-radius: var(--radius-3);
@@ -70,12 +70,12 @@ body{
 }
 .weather{
   text-align: center;
-  padding-block: 20px;
+  padding-block: 15px;
   width: 100%;
   display: none;
 }
 .weather-icon{
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .weather-icon img{
   width: 200px;
@@ -96,7 +96,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 15px;
   flex-wrap: wrap;
 }
 .weather-features .col{
